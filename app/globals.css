@@ -51,7 +51,12 @@
   @apply text-9xl
 }
 
-.subHeading {
+.normalHeading {
+  font-family: 'Walter Turncoat', cursive;
+  @apply text-8xl
+}
+
+.subHeading, .textFont {
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -66,9 +71,13 @@
 
 .footer {
   font-family: 'Quicksand', sans-serif;
-  @apply absolute bottom-0 w-full text-center mb-5;
+  @apply text-center mb-5;
 }
 
 .startButton {
   @apply mt-10 h-10 w-10 flex justify-center items-center rounded-full bg-primary-purple animate-pulse;
+}
+
+.pageWrapper {
+  @apply flex flex-col justify-between h-screen;
 }

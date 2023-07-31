@@ -19,12 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} relative min-h-screen flexCol bgBlueToPink`}
-      >
-        <Navbar />
-        <main className="relative flex flex-col justify-center align-middle">{children}</main>
-        <Footer />
+      <body className={inter.className}>
+        <div className="pageWrapper bgGrayToblue">
+          <Navbar />
+          <main className="flex-1 flex justify-center items-center overflow-y-scroll">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
