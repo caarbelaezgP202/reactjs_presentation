@@ -1,4 +1,5 @@
-import { clsx } from 'clsx'; 
+import { clsx } from 'clsx';
+
 interface Props {
   size: 'text-sm' | 'text-xl' | 'text-3xl';
   children: React.ReactNode;
