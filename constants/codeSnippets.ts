@@ -1,4 +1,6 @@
-import { clsx } from 'clsx'; 
+export const SUBHEADING_CODESNIPPET = 
+`import { clsx } from 'clsx';
+
 interface Props {
   size: 'text-sm' | 'text-xl' | 'text-3xl';
   children: React.ReactNode;
@@ -11,3 +13,4 @@ const Subheading = ({ size, children }: Props) => {
 };
 
 export default Subheading;
+`;

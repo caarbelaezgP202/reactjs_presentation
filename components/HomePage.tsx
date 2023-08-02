@@ -20,7 +20,7 @@ const HomePage = () => {
           alt="react logo"
         />
         <h1 className="landingHeading">React</h1>
-        <Subheading size="medium">What you(we) maybe don&apos;t know</Subheading>
+        <Subheading size="text-xl">What you(we) maybe don&apos;t know</Subheading>
         <button className="startButton" onClick={() => router.push('/basics')}>
           <FaPlay />
         </button>

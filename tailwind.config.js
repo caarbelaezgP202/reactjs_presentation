@@ -18,6 +18,7 @@ module.exports = {
         'primary-magenta': '#DE4AF7',
         'secondary-green': '#8DEA98',
         'secondary-orange': '#F57C24',
+        'primary-blue-code':'#282c34',
         'white': '#FFFFFF',
       },
       animation: {

@@ -5,12 +5,13 @@ import { BsChevronBarLeft,BsChevronBarRight } from 'react-icons/bs';
 import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 
-import { PropsVsState, Virtualdom} from './basics';
+import { PropsVsState, ReactComponent, Virtualdom } from './basics';
 import TransitionPageWrapper from './TransitionPageWrapper';
 
 const components = [
   {index: 0, component: <Virtualdom />},
-  {index: 1, component: <PropsVsState />}
+  {index: 1, component: <PropsVsState />},
+  {index: 3, component: <ReactComponent />}
 ];
 
 const BasicsPage = () => {
