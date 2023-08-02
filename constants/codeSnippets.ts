@@ -1,16 +1,21 @@
 export const SUBHEADING_CODESNIPPET = 
-`import { clsx } from 'clsx';
+`import React, { useState } from 'react';
 
-interface Props {
-  size: 'text-sm' | 'text-xl' | 'text-3xl';
-  children: React.ReactNode;
-};
+function Example({ backgroundColor }) {
+  const [count, setCount] = useState(0);
 
-const Subheading = ({ size, children }: Props) => {
+  const handleClick = () => {
+    setCount(count + 1)
+  };
+
   return (
-    <span className={clsx('subHeading', size)}>{children}</span>
+    <div style={{ backgroundColor }}>
+      <h3 className="text-4xl mb-4">Counter</h3>
+      <p>You clicked {count} times</p>
+      <button onClick={() => handleClick()}>
+        Click me
+      </button>
+    </div>
   );
-};
-
-export default Subheading;
+}
 `;

@@ -9,9 +9,9 @@ import { PropsVsState, ReactComponent, Virtualdom } from './basics';
 import TransitionPageWrapper from './TransitionPageWrapper';
 
 const components = [
-  {index: 0, component: <Virtualdom />},
+  {index: 0, component: <ReactComponent /> },
   {index: 1, component: <PropsVsState />},
-  {index: 3, component: <ReactComponent />}
+  {index: 2, component: <Virtualdom />}
 ];
 
 const BasicsPage = () => {
@@ -19,19 +19,22 @@ const BasicsPage = () => {
   const [currentComponent, setCurrentComponent] = useState(0);
 
   const handleNext = () => {
+    if (currentComponent === 2) {
+      router.push('/patterns');
+    } 
     setCurrentComponent((prev) => prev + 1);
   };
 
   const handleBack = () => {
     if (currentComponent === 0) {
       router.push('/');
-    }
-    setCurrentComponent((prev) => prev -1);
+    } 
+    setCurrentComponent((prev) => prev - 1);
   };
 
   return (
     <TransitionPageWrapper>
-      <div className="flex flex-col justify-center items-stretch px-72">
+      <div className="flex flex-col justify-center items-stretch">
         <AnimatePresence>
           {components[currentComponent]?.component}
         </AnimatePresence>
