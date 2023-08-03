@@ -1,16 +1,23 @@
 "use client";
 
 import { FaPlay } from 'react-icons/fa';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-import Subheading from './Subheading';
-import TransitionPageWrapper from './TransitionPageWrapper';
+import Subheading from '../../Subheading';
+
 
 const HomePage = () => {
   const router = useRouter();
   return (
-    <TransitionPageWrapper>
+    <AnimatePresence>
+    <motion.div
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 15 }}
+      transition={{ delay: 0.25 }}
+    >
       <div className="relative z-10 flex flex-col justify-center items-center">
         <Image
           className="reactLogoSpin"
@@ -25,7 +32,8 @@ const HomePage = () => {
           <FaPlay />
         </button>
       </div>
-    </TransitionPageWrapper>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
