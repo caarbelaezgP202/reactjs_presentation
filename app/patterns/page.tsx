@@ -1,3 +1,4 @@
+import { PatternsPage } from '@/components/pages';
 export default function Patterns() {
-  return <h1>Patterns</h1>;
+  return <PatternsPage />;
 };

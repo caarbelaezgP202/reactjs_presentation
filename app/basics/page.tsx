@@ -1,4 +1,4 @@
-import { BasicsPage } from '@/components';
+import { BasicsPage } from '@/components/pages';
 
 export default function Basics() {
   return <BasicsPage />;
