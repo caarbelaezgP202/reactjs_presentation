@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-import Subheading from '../../Subheading';
+import { Subheading } from '@/components/common';
 
 
 const HomePage = () => {
