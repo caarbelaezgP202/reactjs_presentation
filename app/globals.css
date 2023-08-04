@@ -34,6 +34,10 @@
   @apply flex justify-between items-center;
 }
 
+.flexAround {
+  @apply flex justify-around items-center;
+}
+
 .flexStart {
   @apply flex items-center justify-start;
 }
@@ -56,8 +60,18 @@
   @apply text-7xl lg:text-8xl
 }
 
+.smallHeading {
+  font-family: 'Walter Turncoat', cursive;
+  @apply text-5xl lg:text-6xl
+}
+
 .subHeading, .textFont {
   font-family: 'Quicksand', sans-serif;
+}
+
+.paragraphs {
+  font-family: 'Quicksand', sans-serif;
+  @apply text-2xl
 }
 
 .reactLogoSpin {

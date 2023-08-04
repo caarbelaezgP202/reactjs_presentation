@@ -24,7 +24,7 @@ const TransitionPageWrapper = ({ children, handleBack, handleNext }: Props) => {
           </button>
         </div>
 
-        <div className="flex flex-col justify-start py-10 overflow-y-scroll">
+        <div className="flex flex-col justify-start py-10 px-3 w-full overflow-y-scroll">
           <AnimatePresence>{children}</AnimatePresence>
         </div>
         <div className="controlButtonContainer">

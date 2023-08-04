@@ -1,7 +1,7 @@
 export const SUBHEADING_CODESNIPPET = 
-`import React, { useState } from 'react';
+`import { useState } from 'react';
 
-function Example({ backgroundColor }) {
+const Example = ({ backgroundColor }) => {
   const [count, setCount] = useState(0);
 
   const handleClick = () => {

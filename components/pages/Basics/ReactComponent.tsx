@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from 'react';
-import { CodeBlock, dracula } from 'react-code-blocks';
-import { motion } from 'framer-motion';
+import { useState } from "react";
+import { CodeBlock, dracula } from "react-code-blocks";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-import { SUBHEADING_CODESNIPPET } from '@/constants/codeSnippets';
-import { useWindowSize } from '@/hooks';
+import { SUBHEADING_CODESNIPPET } from "@/constants/codeSnippets";
+import { useWindowSize } from "@/hooks";
 
 const ReactComponent = () => {
   const [count, setCount] = useState(0);
@@ -26,16 +27,36 @@ const ReactComponent = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100 }}
     >
-      <h3 className="normalHeading text-center mb-2">React component</h3>
-      <div className="flexBetween w-full">
-        <section className="w-3/5">
-          <div className="p-2 rounded-lg bg-primary-blue-code shadow-2xl">
+      <h3 className="normalHeading text-center mb-6">React component</h3>
+      <div className="flex gap-12">
+        <p className="paragraphs text-justify flex-grow-0 basis-1/2 lg:self-center">
+          A component is an independent, reusable piece of code which divides
+          the user interfaces into smaller pieces. This concept is used from all
+          the modern libraries/framewroks to build UI.
+        </p>
+        <div className="flex p-2 border-black rounded-md flex-grow-0 basis-1/2">
+          <Image
+            className="rounded-lg"
+            src="/images/components.png"
+            alt="Components"
+            width={1000}
+            height={200}
+          />
+        </div>
+      </div>
+      <div className="flexStart w-full my-3">
+        <h3 className="smallHeading text-left">How does that look in code?</h3>
+      </div>
+      
+      <div className="flexAround w-full">
+        <section className="w-1/2">
+          <div className="p-2 rounded-lg bg-primary-blue-code">
             <CodeBlock
               text={SUBHEADING_CODESNIPPET}
               language="jsx"
               showLineNumbers={false}
               theme={dracula}
-              customStyle={{ fontSize: windowWidth > 1512 ? 14 : 12 }}
+              customStyle={{ fontSize: windowWidth > 1512 ? 18 : 16 }}
             />
           </div>
         </section>
@@ -50,14 +71,13 @@ const ReactComponent = () => {
               >
                 Click me
               </button>
-              <button 
+              <button
                 className="bg-primary-purple text-white p-2 rounded-xl text-xl"
                 onClick={() => handleResetCount()}
               >
                 Reset
               </button>
             </div>
-
           </div>
         </section>
       </div>
