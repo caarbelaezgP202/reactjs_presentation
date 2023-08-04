@@ -31,4 +31,4 @@ const PatternsPage = ({ handleNext, handleBack, showComponent }: Props) => {
   );
 };
 
-export default withInternalNavigation(PatternsPage, components, "mistakes");
+export default withInternalNavigation(PatternsPage, components, 'mistakes', 'basics');

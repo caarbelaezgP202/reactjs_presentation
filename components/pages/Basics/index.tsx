@@ -27,4 +27,4 @@ const BasicsPage = ({ handleNext, handleBack, showComponent }: Props) => {
   );
 };
 
-export default withInternalNavigation(BasicsPage, components, "patterns");
+export default withInternalNavigation(BasicsPage, components, 'patterns');

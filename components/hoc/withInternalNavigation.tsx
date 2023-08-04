@@ -7,7 +7,8 @@ import { useRouter } from 'next/navigation';
 function withInternalNavigation<T>(
   WrappedComponent: ComponentType<T>, 
   navigationItems: any,
-  nextPage: string) {
+  nextPage: string,
+  prevPage?: string) {
     return (hocProps: T) => {
       const router = useRouter();
       const [currentComponent, setCurrentComponent] = useState(0);
@@ -21,7 +22,7 @@ function withInternalNavigation<T>(
 
       const handleBack = () => {
         if (currentComponent === 0) {
-          router.back();
+          router.push(!prevPage ? '/' : `/${prevPage}`);
         }
         setCurrentComponent((prev) => prev - 1);
       };

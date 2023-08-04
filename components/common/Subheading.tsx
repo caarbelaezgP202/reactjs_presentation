@@ -3,11 +3,12 @@ import { clsx } from 'clsx';
 interface Props {
   size: 'text-sm' | 'text-xl' | 'text-3xl';
   children: React.ReactNode;
+  customClass?: string
 };
 
-const Subheading = ({ size, children }: Props) => {
+const Subheading = ({ size, children, customClass }: Props) => {
   return (
-    <span className={clsx('subHeading', size)}>{children}</span>
+    <span className={clsx('subHeading', size, customClass)}>{children}</span>
   );
 };
 

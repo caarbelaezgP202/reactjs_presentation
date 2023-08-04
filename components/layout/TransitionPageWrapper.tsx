@@ -16,14 +16,18 @@ const TransitionPageWrapper = ({ children, handleBack, handleNext }: Props) => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 15 }}
         transition={{ delay: 0.25 }}
-      >
-        <div className="flex flex-col justify-center items-stretch">
-          <AnimatePresence>{children}</AnimatePresence>
-        </div>
-        <div className="flex justify-center gap-10">
+        className="flex flex-1 justify-between h-full"
+      > 
+        <div className="controlButtonContainer">
           <button className="controlButton" onClick={() => handleBack()}>
             <BsChevronBarLeft />
           </button>
+        </div>
+
+        <div className="flex flex-col justify-start py-10 overflow-y-scroll">
+          <AnimatePresence>{children}</AnimatePresence>
+        </div>
+        <div className="controlButtonContainer">
           <button className="controlButton" onClick={() => handleNext()}>
             <BsChevronBarRight />
           </button>

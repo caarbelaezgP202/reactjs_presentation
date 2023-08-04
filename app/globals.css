@@ -71,11 +71,15 @@
 
 .footer {
   font-family: 'Quicksand', sans-serif;
-  @apply text-center mb-5;
+  @apply relative z-10 text-center py-5;
 }
 
 .startButton {
   @apply mt-10 h-10 w-10 flex justify-center items-center rounded-full bg-primary-purple animate-pulse;
+}
+
+.controlButtonContainer {
+  @apply flex items-center mx-10 xl:mx-16 2xl:mx-20;
 }
 
 .controlButton {
@@ -84,4 +88,8 @@
 
 .pageWrapper {
   @apply flex flex-col justify-between h-screen;
+}
+
+.listItemPatterns {
+  @apply mb-3 flex  justify-center w-full rounded-md text-xl p-2
 }

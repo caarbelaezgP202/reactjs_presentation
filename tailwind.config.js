@@ -18,6 +18,8 @@ module.exports = {
         'primary-magenta': '#DE4AF7',
         'secondary-green': '#8DEA98',
         'secondary-orange': '#F57C24',
+        'secondary-orange-light': '#fed7aa',
+        'secondary-red-light': '#fecaca',
         'primary-blue-code':'#282c34',
         'white': '#FFFFFF',
       },
