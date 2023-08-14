@@ -100,10 +100,14 @@
   @apply mt-10 h-14 w-14 flex justify-center items-center rounded-full bg-primary-blue;
 }
 
+.exampleButton {
+  @apply mt-10 h-14 w-40 flex justify-center items-center rounded-lg bg-primary-blue
+}
+
 .pageWrapper {
   @apply flex flex-col justify-between h-screen;
 }
 
 .listItemPatterns {
-  @apply mb-3 flex  justify-center w-full rounded-md text-xl p-2
+  @apply mb-3 flex border border-black justify-center w-full rounded-md text-xl p-2
 }

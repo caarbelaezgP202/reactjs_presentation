@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { CodeBlock, dracula } from "react-code-blocks";
-import { motion } from "framer-motion";
-import Image from "next/image";
+import { useState } from 'react';
+import { CodeBlock, dracula } from 'react-code-blocks';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-import { SUBHEADING_CODESNIPPET } from "@/constants/codeSnippets";
-import { useWindowSize } from "@/hooks";
+import { SUBHEADING_CODESNIPPET } from '@/constants/codeSnippets';
+import { useWindowSize } from '@/hooks';
 
 const ReactComponent = () => {
   const [count, setCount] = useState(0);

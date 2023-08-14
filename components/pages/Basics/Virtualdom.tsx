@@ -1,5 +1,4 @@
-import { BsChevronDoubleRight } from 'react-icons/bs';
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Virtualdom = () => {
   return (
@@ -25,18 +24,27 @@ const Virtualdom = () => {
         <section className="w-3/5">
           <h3 className="normalHeading text-center mb-7">Virtual DOM</h3>
           <ul className="text-center text-2xl">
-            <li className="mb-3 pr- flex gap-2 items-center justify-center">
-              <BsChevronDoubleRight />
-              <span>Virtual representation (JSON).</span>
-            </li>
-            <li className="mb-3 pr- flex gap-2 items-center justify-center">
-              <BsChevronDoubleRight />
-              <span>Improves performance.</span>
-            </li>
-            <li className="mb-3 pr- flex gap-2 items-center justify-center">
-              <BsChevronDoubleRight />
-              <span>Low cost.</span>
-            </li>
+            <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-secondary-green text-black listItemPatterns"
+            >
+              Virtual representation (JSON)
+            </motion.li>
+            <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-secondary-orange text-black listItemPatterns"
+            >
+              Improves performance
+            </motion.li>
+            <motion.li
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-secondary-green text-black listItemPatterns"
+            >
+              Computational low cost
+            </motion.li>
           </ul>
         </section>
       </div>

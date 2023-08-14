@@ -14,7 +14,6 @@ const components = [
   { index: 1, component: <ContPresentPattern /> },
   { index: 2, component: <HocPattern /> },
   { index: 3, component: <HooksPattern /> },
-  { index: 4, component: <OtherPatterns /> },
 ];
 
 interface Props {
