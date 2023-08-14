@@ -1,14 +1,11 @@
 "use client";
 
-import { BsChevronBarLeft, BsChevronBarRight } from 'react-icons/bs';
 import { AnimatePresence, motion } from 'framer-motion';
 
 interface Props {
   children?: React.ReactNode;
-  handleNext: () => void;
-  handleBack: () => void;
 }
-const TransitionPageWrapper = ({ children, handleBack, handleNext }: Props) => {
+const TransitionPageWrapper = ({ children }: Props) => {
   return (
     <AnimatePresence>
       <motion.div
@@ -18,19 +15,8 @@ const TransitionPageWrapper = ({ children, handleBack, handleNext }: Props) => {
         transition={{ delay: 0.25 }}
         className="flex flex-1 justify-between h-full"
       > 
-        <div className="controlButtonContainer">
-          <button className="controlButton" onClick={() => handleBack()}>
-            <BsChevronBarLeft />
-          </button>
-        </div>
-
         <div className="flex flex-col justify-start py-10 px-3 w-full overflow-y-scroll">
           <AnimatePresence>{children}</AnimatePresence>
-        </div>
-        <div className="controlButtonContainer">
-          <button className="controlButton" onClick={() => handleNext()}>
-            <BsChevronBarRight />
-          </button>
         </div>
       </motion.div>
     </AnimatePresence>

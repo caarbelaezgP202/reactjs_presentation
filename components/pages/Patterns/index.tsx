@@ -6,7 +6,6 @@ import TransitionPageWrapper from '../../layout/TransitionPageWrapper';
 import ContPresentPattern  from './ContPresetPattern';
 import HocPattern from './HocPattern';
 import HooksPattern  from './HooksPattern';
-import OtherPatterns  from './OtherPatterns';
 import WhyPatterns from './WhyPatterns';
 
 const components = [
@@ -17,14 +16,12 @@ const components = [
 ];
 
 interface Props {
-  showComponent: React.ReactNode;
-  handleNext: () => void;
-  handleBack: () => void;
+  showComponent?: React.ReactNode;
 }
 
-const PatternsPage = ({ handleNext, handleBack, showComponent }: Props) => {
+const PatternsPage = ({ showComponent }: Props) => {
   return (
-    <TransitionPageWrapper handleBack={handleBack} handleNext={handleNext}>
+    <TransitionPageWrapper>
       {showComponent}
     </TransitionPageWrapper>
   );

@@ -14,14 +14,12 @@ const components = [
 ];
 
 interface Props {
-  showComponent: React.ReactNode;
-  handleNext: () => void;
-  handleBack: () => void;
+  showComponent?: React.ReactNode;
 }
 
-const BasicsPage = ({ handleNext, handleBack, showComponent }: Props) => {
+const BasicsPage = ({ showComponent }: Props) => {
   return (
-    <TransitionPageWrapper handleBack={handleBack} handleNext={handleNext}>
+    <TransitionPageWrapper>
       {showComponent}
     </TransitionPageWrapper>
   );
