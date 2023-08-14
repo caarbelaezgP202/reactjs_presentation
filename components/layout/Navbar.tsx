@@ -8,7 +8,7 @@ const Navbar = () => {
       <ul className="flexBetween gap-20">
         {navItems.map((navItem) => (
           <li key={navItem.name} className="p-2 rounded-md hover:bg-light-gray transition">
-            <Link className="cursor-pointer" href={`/${navItem.route}`}>
+            <Link className="cursor-pointer" href={`${navItem.route}`}>
               {navItem.name}
             </Link>
           </li>

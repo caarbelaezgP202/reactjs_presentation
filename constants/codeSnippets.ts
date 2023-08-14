@@ -202,3 +202,67 @@ export const Label = ({ text }) => {
   )
 }
 `;
+
+export const USEEFFECT1_CODESNIPPET = 
+`import { useEffect, useState } from 'react'
+
+export const SomeComponent = () => {
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+  const [duration, setDuration] = useState(null);
+
+  const onChangeFrom = () => {...}
+  const onChangeTo = () => {...}
+
+  useEffect(() => {
+    setDuration(\`\${from} - \${to}\`)
+  }, [from, to]);
+
+  return(
+    <>
+      <input type="date" name="from" onChange=(onChangeFrom) value={from}/>
+      <input type="date" name="to" onChange=(onChangeTo) value={to}/>
+      {duration}
+    </>
+  )
+}
+`;
+
+export const USEEFFECT2_CODESNIPPET = 
+`import { useEffect, useState } from 'react'
+
+export const SomeComponent = () => {
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+
+  const onChangeFrom = () => {...}
+  const onChangeTo = () => {...}
+
+  return(
+    <>
+      <input type="date" name="from" onChange=(onChangeFrom) value={from}/>
+      <input type="date" name="to" onChange=(onChangeTo) value={to}/>
+      {\`\${from} - \${to}\`}
+    </>
+  )
+}
+`;
+
+export const SPREADOPERATOR_CODESNIPPET = 
+`export const SomeComponent = () => {
+  const name = 'Carlos';
+  const lastName = 'Arbelaez';
+  const age = undefined;
+
+  const someProps = {
+    name,
+    lastName,
+    age,
+  };
+
+  return(
+    <ChildComponent {...someProps} />
+  )
+}
+`;
+
