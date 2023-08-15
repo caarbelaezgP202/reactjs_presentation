@@ -17,14 +17,14 @@ function withInternalNavigation<T>(
 
     const handleNext = () => {
       if (currentComponent === navigationItems.length - 1) {
-        router.push(`/${nextPage}`);
+        router.push(`${nextPage}`);
       }
       setCurrentComponent((prev) => prev + 1);
     };
 
     const handleBack = () => {
       if (currentComponent === 0) {
-        router.push(!prevPage ? "/" : `/${prevPage}`);
+        router.push(!prevPage ? "/" : `${prevPage}`);
       }
       setCurrentComponent((prev) => prev - 1);
     };

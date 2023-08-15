@@ -266,3 +266,130 @@ export const SPREADOPERATOR_CODESNIPPET =
 }
 `;
 
+export const ESLINT_CODESNIPPET =
+`
+{
+  "extends": "next/core-web-vitals",
+  "plugins": ["react", "simple-import-sort", "import-quotes"],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import-quotes/import-quotes": [1, "single"],
+    "semi": ["error", "always"],
+    "eol-last": ["error", "always"]
+  },
+  "overrides": [
+    // override "simple-import-sort" config
+    {
+      "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "rules": {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            "groups": [
+              // Packages 'react' related packages come first.
+              ["^react", "^@?\\\\w"],
+              // Internal packages.
+              ["^(@|components)(/.*|$)"],
+              // Side effect imports.
+              ["^\\\\u0000"],
+              // Parent imports. Put '..' last.
+              ["^\\\\.\\\\.(?!/?$)", "^\\\\.\\\\./?$"],
+              // Other relative imports. Put same-folder imports and '.' last.
+              ["^\\\\./(?=.*/)(?!/?$)", "^\\\\.(?!/?$)", "^\\\\./?$"],
+              // Style imports.
+              ["^.+\\\\.?(css)$"]
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}`;
+
+export const BUTTON_CODESNIPPET =
+`const Button = (props) => {
+  return (
+    <button className={\`props?.customClass || ''\`}>
+      {props.image ? <span><img src={props.image} /></span> : null}
+      {props.text}
+    </button>
+  );
+};`;
+
+export const GOOD_BUTTON_CODESNIPPET =
+`const Button = ({ text, customClass, image }) => {
+  return (
+    <button className={customClass}>
+      {image ? <span><img src={image.url} /></span> : null}
+      {text}
+    </button>
+  );
+};`;
+
+export const TERNARY_CODESNIPPET = 
+`function ContactList({contacts}) {
+  return (
+    <div>
+      <ul>
+        {contacts.length
+          ? contacts.map(contact => (
+              <li key={contact.id}>
+                {contact.firstName} {contact.lastName}
+              </li>
+            ))
+          : null}
+      </ul>
+    </div>
+  )
+}`;
+
+export const QUESTION_CONTAINER_CODESNIPPET = 
+`
+/...
+
+const [isCarlos, setIsCarlos] = useState(true);
+
+/...
+
+<section className="flex flex-col w-1/2">
+  {isCarlos 
+    ? <Counter name="Carlos" /> 
+    : <Counter name="Jess"/>
+  }
+
+  <button
+    className="swapButton"
+    onClick={() => setIsCarlos(c => !c) }
+  >
+    Swap
+  </button>
+</section>`;
+
+export const QUESTION_PRESENTATIONAL_CODESNIPPET = 
+`export function Counter({ name }: Props) {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className="exampleContainer">
+      <div className="exampleName">{name}</div>
+      <div className="exampleControls_container">
+        <button 
+          className="exampleCommandButton" 
+          onClick={() => setCount((c) => c - 1)}
+        >
+          <FiMinus />
+        </button>
+        <p className="paragraphs text-white">{count}</p>
+        
+        <button 
+          className="exampleCommandButton" 
+          onClick={() => setCount((c) => c + 1)}
+        >
+          <BsPlusLg />
+        </button>
+      </div>
+    </div>
+  );
+}
+`;

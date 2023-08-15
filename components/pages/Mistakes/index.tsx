@@ -1,5 +1,7 @@
 "use client";
+import { BsChevronBarLeft, BsChevronBarRight } from 'react-icons/bs';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 import TransitionPageWrapper from '../../layout/TransitionPageWrapper';
 
@@ -9,6 +11,7 @@ import ErrorThree from './ErrorThree';
 import ErrorTwo from './ErrorTwo';
 
 const Mistakes = () => {
+  const router = useRouter();
   return (
     <TransitionPageWrapper>
       <motion.div
@@ -30,6 +33,18 @@ const Mistakes = () => {
         <ErrorTwo />
         <ErrorThree />
         <ErrorFour />
+        <div className="flexCenter">
+          <div className="controlButtonContainer">
+            <button className="controlButton" onClick={() => router.push('/patterns')}>
+              <BsChevronBarLeft />
+            </button>
+          </div>
+          <div className="controlButtonContainer">
+            <button className="controlButton" onClick={() => router.push('/practices')}>
+              <BsChevronBarRight />
+            </button>
+          </div>
+        </div>
       </motion.div>
     </TransitionPageWrapper>
   );

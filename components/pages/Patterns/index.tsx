@@ -27,4 +27,4 @@ const PatternsPage = ({ showComponent }: Props) => {
   );
 };
 
-export default withInternalNavigation(PatternsPage, components, 'mistakes', 'basics');
+export default withInternalNavigation(PatternsPage, components, '/mistakes', '/basics');
